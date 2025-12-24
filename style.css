@@ -305,5 +305,18 @@ footer {
   margin: 30px auto 0 auto;
 }
 
+.sobre {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.sobre p {
+  margin-bottom: 24px;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  color: #222;
+}
+
 
 
