@@ -1,6 +1,7 @@
-/* =========================
-   RESET E FONTE
-========================= */
+/* =========================================================
+   1. RESET, FONTE E CONFIGURAÇÕES GERAIS
+========================================================= */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 * {
@@ -16,9 +17,15 @@ body {
   line-height: 1.6;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* Espaço reservado para menu fixo */
+body {
+  padding-top: 60px;
+}
+
+/* =========================================================
+   2. HEADER (CAPA)
+========================================================= */
+
 header {
   background: url("images/capa.jpg") center / cover no-repeat;
   color: white;
@@ -38,10 +45,10 @@ header p {
   opacity: 0.9;
 }
 
+/* =========================================================
+   3. MENU FIXO (DESKTOP)
+========================================================= */
 
-/* =========================
-   MENU FIXO (DESKTOP)
-========================= */
 header nav {
   position: fixed;
   top: 0;
@@ -67,36 +74,10 @@ header nav a:hover {
   color: #38ada9;
 }
 
-/* Cria espaço para o menu fixo no topo */
-body {
-  padding-top: 60px;
-}
+/* =========================================================
+   4. BOTÕES
+========================================================= */
 
-
-/* =========================
-   MENU MOBILE
-========================= */
-@media (max-width: 768px) {
-  header nav {
-    position: relative; /* deixa de ser fixo */
-    padding: 12px 10px;
-    flex-wrap: wrap;
-  }
-
-  header nav a {
-    margin: 8px 12px;
-    font-size: 0.95rem;
-  }
-
-  body {
-    padding-top: 0; /* remove espaço extra do topo */
-  }
-}
-
-
-/* =========================
-   BOTÃO PADRÃO
-========================= */
 .btn {
   display: inline-block;
   background: white;
@@ -115,10 +96,31 @@ body {
   transform: translateY(-3px);
 }
 
+/* Reforço de exibição */
+.btn {
+  display: inline-block;
+}
 
-/* =========================
-   SEÇÕES
-========================= */
+/* Centralização de botões */
+.cta-final .btn {
+  display: block;
+  width: fit-content;
+  margin: 30px auto 0 auto;
+}
+
+.destaque {
+  text-align: center;
+}
+
+.destaque .btn {
+  display: inline-block;
+  margin: 30px auto 0 auto;
+}
+
+/* =========================================================
+   5. SEÇÕES GERAIS
+========================================================= */
+
 section {
   padding: 60px 20px;
   max-width: 1200px;
@@ -135,9 +137,10 @@ ul li {
   margin-bottom: 10px;
 }
 
-/* =========================
-   CARDS DE SERVIÇOS
-========================= */
+/* =========================================================
+   6. CARDS DE SERVIÇOS
+========================================================= */
+
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -147,7 +150,7 @@ ul li {
 
 .card {
   background: white;
-  padding: 0; /* tiramos padding para a imagem ocupar corretamente */
+  padding: 0;
   border-radius: 10px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
   text-align: center;
@@ -155,7 +158,7 @@ ul li {
   transition: transform 0.3s, box-shadow 0.3s;
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* garante que nada ultrapasse o card */
+  overflow: hidden;
 }
 
 .card:hover {
@@ -166,7 +169,7 @@ ul li {
 .card img {
   width: 100%;
   height: 180px;
-  object-fit: cover; /* mantém proporção e cobre o card */
+  object-fit: cover;
   flex-shrink: 0;
 }
 
@@ -182,9 +185,84 @@ ul li {
   flex-grow: 1;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* =========================================================
+   7. PROJETOS EM DESTAQUE
+========================================================= */
+
+.projetos-destaque {
+  width: 100%;
+  padding: 100px 0;
+  background-color: #f4f6f8;
+}
+
+/* Linhas */
+.projetos-destaque .linha {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto 120px auto;
+  padding: 0 5%;
+  gap: 80px;
+}
+
+/* Linha invertida */
+.projetos-destaque .linha.reverso {
+  flex-direction: row-reverse;
+}
+
+/* Imagem */
+.projetos-destaque .imagem {
+  width: 50%;
+  flex-shrink: 0;
+}
+
+.projetos-destaque .imagem img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+/* Texto */
+.projetos-destaque .texto {
+  width: 50%;
+}
+
+.projetos-destaque h2 {
+  font-size: 2.4rem;
+  margin-bottom: 24px;
+  color: #0a2540;
+}
+
+.projetos-destaque p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #222;
+}
+
+/* =========================================================
+   8. SOBRE
+========================================================= */
+
+.sobre {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.sobre p {
+  margin-bottom: 24px;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  color: #222;
+}
+
+/* =========================================================
+   9. FOOTER
+========================================================= */
+
 footer {
   background: #0a3d62;
   color: white;
@@ -194,13 +272,34 @@ footer {
   line-height: 1.5;
 }
 
-/* =========================
-   RESPONSIVIDADE
-========================= */
+/* =========================================================
+   10. RESPONSIVIDADE
+========================================================= */
+
+/* Menu Mobile */
+@media (max-width: 768px) {
+  header nav {
+    position: relative;
+    padding: 12px 10px;
+    flex-wrap: wrap;
+  }
+
+  header nav a {
+    margin: 8px 12px;
+    font-size: 0.95rem;
+  }
+
+  body {
+    padding-top: 0;
+  }
+}
+
+/* Ajustes gerais mobile */
 @media (max-width: 768px) {
   header h1 {
     font-size: 2rem;
   }
+
   header p {
     font-size: 1rem;
   }
@@ -218,60 +317,7 @@ footer {
   }
 }
 
-.projetos-destaque {
-  width: 100%;
-  padding: 100px 0;
-  background-color: #f4f6f8;
-}
-
-/* Linha principal */
-.projetos-destaque .linha {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  max-width: 1600px;
-  margin: 0 auto 120px auto;
-  padding: 0 5%;
-  gap: 80px;
-}
-
-/* Inversão da segunda linha */
-.projetos-destaque .linha.reverso {
-  flex-direction: row-reverse;
-}
-
-/* Imagem ocupa METADE da tela */
-.projetos-destaque .imagem {
-  width: 50%;
-  flex-shrink: 0;
-}
-
-.projetos-destaque .imagem img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 16px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-}
-
-/* Texto ocupa a outra METADE */
-.projetos-destaque .texto {
-  width: 50%;
-}
-
-.projetos-destaque h2 {
-  font-size: 2.4rem;
-  margin-bottom: 24px;
-  color: #0a2540;
-}
-
-.projetos-destaque p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #222;
-}
-
-/* Mobile */
+/* Projetos destaque mobile */
 @media (max-width: 900px) {
   .projetos-destaque .linha,
   .projetos-destaque .linha.reverso {
@@ -284,39 +330,3 @@ footer {
     text-align: center;
   }
 }
-
-.btn {
-  display: inline-block;
-}
-
-/* Centralizar botão quando estiver sozinho */
-.cta-final .btn {
-  display: block;
-  width: fit-content;
-  margin: 30px auto 0 auto;
-}
-/* Centralizar botões nas seções de destaque */
-.destaque {
-  text-align: center;
-}
-
-.destaque .btn {
-  display: inline-block;
-  margin: 30px auto 0 auto;
-}
-
-.sobre {
-  max-width: 900px;
-  margin: 80px auto;
-  padding: 0 20px;
-}
-
-.sobre p {
-  margin-bottom: 24px;
-  line-height: 1.8;
-  font-size: 1.05rem;
-  color: #222;
-}
-
-
-
