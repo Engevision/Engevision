@@ -295,5 +295,15 @@ footer {
   width: fit-content;
   margin: 30px auto 0 auto;
 }
+/* Centralizar botões nas seções de destaque */
+.destaque {
+  text-align: center;
+}
+
+.destaque .btn {
+  display: inline-block;
+  margin: 30px auto 0 auto;
+}
+
 
 
