@@ -37,29 +37,24 @@ header p {
 }
 
 /* MENU FIXO */
-header nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(10, 61, 98, 0.95);
-  display: flex;
-  justify-content: center;
-  padding: 15px 0;
-  z-index: 1000;
+/* Correção do menu no mobile */
+@media (max-width: 768px) {
+  header nav {
+    position: relative; /* deixa de ser fixo */
+    padding: 12px 10px;
+    flex-wrap: wrap;
+  }
+
+  header nav a {
+    margin: 8px 12px;
+    font-size: 0.95rem;
+  }
+
+  body {
+    padding-top: 0; /* remove espaço extra do topo */
+  }
 }
 
-header nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 20px;
-  font-weight: 600;
-  transition: color 0.3s;
-}
-
-header nav a:hover {
-  color: #38ada9;
-}
 
 /* BOTÃO */
 .btn {
@@ -248,3 +243,4 @@ footer {
     text-align: center;
   }
 }
+
