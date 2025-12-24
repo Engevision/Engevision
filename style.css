@@ -285,4 +285,15 @@ footer {
   }
 }
 
+.btn {
+  display: inline-block;
+}
+
+/* Centralizar botão quando estiver sozinho */
+.cta-final .btn {
+  display: block;
+  width: fit-content;
+  margin: 30px auto 0 auto;
+}
+
 
