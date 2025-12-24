@@ -17,27 +17,65 @@ body {
 }
 
 /* =========================
-   HEADER E MENU FIXO
+   HEADER
 ========================= */
 header {
-  background: url("images/capa.jpg") center/cover no-repeat;
+  background: url("images/capa.jpg") center / cover no-repeat;
   color: white;
-  padding: 120px 20px 80px 20px;
+  padding: 140px 20px 90px;
   text-align: center;
   position: relative;
 }
 
+/* Título e subtítulo */
 header h1 {
   font-size: 3rem;
+  margin-bottom: 10px;
 }
 
 header p {
-  margin: 15px 0;
   font-size: 1.2rem;
+  opacity: 0.9;
 }
 
-/* MENU FIXO */
-/* Correção do menu no mobile */
+
+/* =========================
+   MENU FIXO (DESKTOP)
+========================= */
+header nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(10, 61, 98, 0.95);
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  z-index: 1000;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 22px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: #38ada9;
+}
+
+/* Cria espaço para o menu fixo no topo */
+body {
+  padding-top: 60px;
+}
+
+
+/* =========================
+   MENU MOBILE
+========================= */
 @media (max-width: 768px) {
   header nav {
     position: relative; /* deixa de ser fixo */
@@ -56,17 +94,19 @@ header p {
 }
 
 
-/* BOTÃO */
+/* =========================
+   BOTÃO PADRÃO
+========================= */
 .btn {
   display: inline-block;
   background: white;
   color: #0a3d62;
-  padding: 12px 25px;
+  padding: 12px 28px;
   text-decoration: none;
   font-weight: 700;
-  border-radius: 5px;
-  margin-top: 15px;
-  transition: all 0.3s;
+  border-radius: 6px;
+  margin-top: 20px;
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
@@ -74,6 +114,7 @@ header p {
   color: white;
   transform: translateY(-3px);
 }
+
 
 /* =========================
    SEÇÕES
@@ -243,4 +284,5 @@ footer {
     text-align: center;
   }
 }
+
 
