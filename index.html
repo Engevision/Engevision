@@ -1,154 +1,238 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Engevision | Engenharia de Energia</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>EngeVision | Engenharia Elétrica</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --azul-base: #0B1020;
+      --azul-tecnico: #1F4FD8;
+      --amarelo: #F2B705;
+      --branco: #FFFFFF;
+      --cinza: #B0B6C3;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--azul-base);
+      color: var(--branco);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(
+        rgba(11,16,32,0.75),
+        rgba(11,16,32,0.75)
+      ),
+      url("images/capa.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      padding: 80px 10%;
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .hero h2 {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--cinza);
+      margin-bottom: 40px;
+    }
+
+    .slogan {
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      color: var(--amarelo);
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    /* SEÇÕES */
+    section {
+      padding: 80px 10%;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 24px;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: "";
+      width: 60px;
+      height: 3px;
+      background-color: var(--amarelo);
+      display: block;
+      margin-top: 10px;
+    }
+
+    /* QUEM SOMOS */
+    .quem-somos p {
+      max-width: 800px;
+      color: var(--cinza);
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      border: 1px solid var(--amarelo);
+      color: var(--amarelo);
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: var(--amarelo);
+      color: var(--azul-base);
+    }
+
+    /* ATUAÇÃO */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background-color: #11162b;
+      padding: 40px 30px;
+      border-left: 4px solid transparent;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border-left: 4px solid var(--amarelo);
+      background-color: #141a35;
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    /* TRANSIÇÃO ENERGÉTICA */
+    .transicao p {
+      max-width: 900px;
+      color: var(--cinza);
+    }
+
+    /* CTA */
+    .cta {
+      background-color: #0f1530;
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero h2 {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
-  <h1>Engevision</h1>
-  <p>Engenharia elétrica e de energia aplicada à eficiência, segurança e sustentabilidade</p>
-
-  <nav>
-    <a href="index.html">Início</a>
-    <a href="sobre.html">Sobre</a>
-    <a href="servicos.html">Serviços</a>
-    <a href="portfolio.html">Projetos</a>
-    <a href="contato.html">Contato</a>
-  </nav>
-</header>
-
-
-  <section class="destaque">
-  <h2>Soluções em engenharia de energia para empresas e residências</h2>
-  <p>
-    Desenvolvemos e executamos projetos elétricos, soluções em mercado livre de energia,
-    geração renovável e eficiência energética, garantindo desempenho técnico, economia
-    e conformidade normativa.
-  </p>
-    <a href="contato.html" class="btn">Solicitar uma Análise</a>
-</section>
-
-  
-  <section class="projetos-destaque">
-
-  <div class="linha">
-    <div class="imagem">
-      <img src="images/gif-projeto.gif" alt="Projeto elétrico Engevision">
-    </div>
-
-    <div class="texto">
-      <h2>Engenharia aplicada ao seu projeto</h2>
-      <p>
-        Cada projeto desenvolvido pela Engevision é elaborado com base em critérios
-        técnicos rigorosos, normas regulatórias e análise de viabilidade econômica.
-        Nosso objetivo é entregar sistemas elétricos seguros, eficientes e preparados
-        para expansão futura.
-      </p>
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-content">
+      <div class="slogan">Engineering the power behind the future</div>
+      <h1>Engenharia elétrica aplicada à energia</h1>
+      <h2>Projetos, execução e soluções técnicas para sistemas elétricos modernos e eficientes.</h2>
     </div>
   </div>
 
-
-    <div class="linha">
-  
-  <div class="texto">
-    <h2>Do conceito à execução</h2>
+  <!-- QUEM SOMOS -->
+  <section class="quem-somos">
+    <h2 class="section-title">Quem somos</h2>
     <p>
-      Integramos projeto, fornecimento e execução para garantir que o que foi
-      especificado no papel seja fielmente implementado em campo, evitando retrabalhos,
-      desperdícios e riscos operacionais.
+      A EngeVision é uma empresa de engenharia elétrica que atua em projetos e execução de sistemas elétricos,
+      integrando soluções em energia renovável, eficiência energética e mercado de energia.
     </p>
-  </div>
+    <a href="quem-somos.html" class="btn">Conheça a EngeVision</a>
+  </section>
 
-  <div class="imagem">
-    <img src="images/execucao-projeto.jpg" alt="Execução de projeto elétrico Engevision">
-  </div>
+  <!-- ATUAÇÃO -->
+  <section>
+    <h2 class="section-title">Atuação</h2>
 
-</div>
+    <div class="cards">
+      <a href="projetos.html" class="card">
+        <h3>Projetos e Execução Elétrica</h3>
+      </a>
 
+      <a href="automacao.html" class="card">
+        <h3>Automação</h3>
+      </a>
 
-<div class="linha">
+      <a href="renovaveis.html" class="card">
+        <h3>Energia Renovável</h3>
+      </a>
 
-  <div class="imagem">
-    <img src="images/auditoria.jpg" alt="Auditoria e análise técnica de sistemas elétricos">
-  </div>
+      <a href="eficiencia.html" class="card">
+        <h3>Eficiência e Auditoria Energética</h3>
+      </a>
 
-  <div class="texto">
-    <h2>Auditoria técnica e energética</h2>
+      <a href="mercado.html" class="card">
+        <h3>Mercado de Energia</h3>
+      </a>
+    </div>
+  </section>
+
+  <!-- TRANSIÇÃO ENERGÉTICA -->
+  <section class="transicao">
+    <h2 class="section-title">Transição energética</h2>
     <p>
-      A Engevision realiza auditorias técnicas e energéticas completas para identificar
-      não conformidades, perdas, desperdícios e oportunidades de melhoria nos sistemas
-      elétricos e no consumo de energia. Nossos relatórios fornecem embasamento técnico
-      para tomadas de decisão seguras, investimentos e adequações regulatórias.
+      Atuamos alinhados à transição energética, contribuindo para sistemas elétricos mais eficientes,
+      confiáveis e integrados a fontes renováveis.
     </p>
-  </div>
+  </section>
 
-</div>
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Fale com nossa equipe técnica</h2>
+    <a href="contato.html" class="btn">Entrar em contato</a>
+  </section>
 
-
-    <div class="linha">
-
-  <div class="texto">
-    <h2>Mercado Livre de Energia</h2>
-    <p>
-      Assessoramos empresas e grandes consumidores em todas as etapas de migração
-      para o Ambiente de Contratação Livre (ACL), desde os estudos de viabilidade
-      até a gestão contratual e otimização contínua dos custos com energia.
-      Nossa atuação garante previsibilidade, economia e segurança regulatória.
-    </p>
-  </div>
-
-  <div class="imagem">
-    <img src="images/mercado-livre-de-energia.jpg" alt="Gestão e migração para o Mercado Livre de Energia">
-  </div>
-
-</div>
-
-    
-</section>
-
-<section class="diferenciais">
-  <h2>Excelência técnica e visão estratégica</h2>
-  <ul>
-    <li>Atuação como empresa de engenharia especializada</li>
-    <li>Integração entre projeto, execução e gestão energética</li>
-    <li>Soluções orientadas a retorno financeiro e segurança operacional</li>
-    <li>Atendimento a clientes corporativos e residenciais</li>
-    <li>Conformidade com normas técnicas e regulatórias</li>
-  </ul>
-</section>
-
-
-<section class="cta-final">
-  <h2>Transforme sua estrutura energética</h2>
-  <p>
-    Entre em contato com a Engevision e receba uma análise técnica para identificar
-    oportunidades de economia, modernização e maior eficiência energética.
-  </p>
-  <a href="contato.html" class="btn">Solicitar uma Análise</a>
-</section>
-
-<footer>
-  <p>© 2025 Engevision Engenharia e Energia</p>
-</footer>
-
-<script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
