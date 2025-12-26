@@ -200,6 +200,21 @@ img {
 .nav-menu a:hover {
   color: var(--amarelo);
 }
+.nav-menu > li > a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--amarelo);
+  transition: width 0.3s ease;
+}
+
+.nav-menu > li > a:hover::after {
+  width: 100%;
+}
+
 
 /* ==============================
    BOTÃO CONTATO
@@ -966,6 +981,7 @@ section {
     font-size: 0.8rem;
   }
 }
+
 
 
 
