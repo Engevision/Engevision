@@ -939,3 +939,82 @@ section {
     font-size: 0.8rem;
   }
 }
+
+/* ==============================
+   PÁGINA: Projetos e Execução Elétrica
+================================ */
+
+/* Container principal da página de atuação */
+.atuacao-page {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Título principal */
+.atuacao-page .section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--azul-base);
+  text-align: center;
+}
+
+/* Subtítulo / descrição */
+.atuacao-page .section-subtitle {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--cinza-escuro);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Conteúdo textual */
+.atuacao-page .content p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: var(--cinza-base);
+}
+
+/* Listas */
+.atuacao-page .content ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+.atuacao-page .content ul li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: var(--cinza-base);
+}
+
+/* Botão de orçamento */
+.atuacao-page .btn-large {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: var(--amarelo);
+  color: var(--azul-base);
+  padding: 12px 30px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.atuacao-page .btn-large:hover {
+  background-color: var(--amarelo-escuro);
+  transform: translateY(-2px);
+}
+
+/* Risquinho nos títulos da página (opcional) */
+.atuacao-page .section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: var(--amarelo);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
