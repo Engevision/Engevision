@@ -1,332 +1,229 @@
-/* =========================================================
-   1. RESET, FONTE E CONFIGURAÇÕES GERAIS
-========================================================= */
+/* ==============================
+   VARIÁVEIS DE IDENTIDADE
+================================ */
+:root {
+  --azul-base: #0B1020;
+  --azul-tecnico: #1F4FD8;
+  --amarelo: #F2B705;
+  --branco: #FFFFFF;
+  --cinza: #B0B6C3;
+  --azul-card: #11162b;
+  --azul-card-hover: #141a35;
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-
+/* ==============================
+   RESET E BASE
+================================ */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: #f5f7fa;
-  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--azul-base);
+  color: var(--branco);
   line-height: 1.6;
 }
 
-/* Espaço reservado para menu fixo */
-body {
-  padding-top: 60px;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-/* =========================================================
-   2. HEADER (CAPA)
-========================================================= */
+img {
+  max-width: 100%;
+  display: block;
+}
 
-header {
-  background: url("images/capa.jpg") center / cover no-repeat;
-  color: white;
-  padding: 140px 20px 90px;
-  text-align: center;
+/* ==============================
+   HERO SECTION
+================================ */
+.hero {
+  min-height: 100vh;
+  background:
+    linear-gradient(
+      rgba(11, 16, 32, 0.75),
+      rgba(11, 16, 32, 0.75)
+    ),
+    url("images/capa.jpg") center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 80px 10%;
+}
+
+.hero-content {
+  max-width: 720px;
+  animation: fadeUp 1s ease forwards;
+}
+
+.slogan {
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--amarelo);
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.hero h2 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--cinza);
+}
+
+/* ==============================
+   SEÇÕES GERAIS
+================================ */
+section {
+  padding: 80px 10%;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 24px;
   position: relative;
 }
 
-/* Título e subtítulo */
-header h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+.section-title::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background-color: var(--amarelo);
+  display: block;
+  margin-top: 10px;
 }
 
-header p {
-  font-size: 1.2rem;
-  opacity: 0.9;
+/* ==============================
+   QUEM SOMOS
+================================ */
+.quem-somos p {
+  max-width: 820px;
+  color: var(--cinza);
+  margin-bottom: 32px;
 }
 
-/* =========================================================
-   3. MENU FIXO (DESKTOP)
-========================================================= */
-
-header nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(10, 61, 98, 0.95);
-  display: flex;
-  justify-content: center;
-  padding: 15px 0;
-  z-index: 1000;
-}
-
-header nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 22px;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: color 0.3s;
-}
-
-header nav a:hover {
-  color: #38ada9;
-}
-
-/* =========================================================
-   4. BOTÕES
-========================================================= */
-
+/* ==============================
+   BOTÕES
+================================ */
 .btn {
   display: inline-block;
-  background: white;
-  color: #0a3d62;
-  padding: 12px 28px;
-  text-decoration: none;
-  font-weight: 700;
-  border-radius: 6px;
-  margin-top: 20px;
+  padding: 14px 36px;
+  border: 1px solid var(--amarelo);
+  color: var(--amarelo);
+  font-weight: 600;
+  letter-spacing: 0.5px;
   transition: all 0.3s ease;
 }
 
 .btn:hover {
-  background: #38ada9;
-  color: white;
-  transform: translateY(-3px);
+  background-color: var(--amarelo);
+  color: var(--azul-base);
 }
 
-/* Reforço de exibição */
-.btn {
-  display: inline-block;
-}
-
-/* Centralização de botões */
-.cta-final .btn {
-  display: block;
-  width: fit-content;
-  margin: 30px auto 0 auto;
-}
-
-.destaque {
-  text-align: center;
-}
-
-.destaque .btn {
-  display: inline-block;
-  margin: 30px auto 0 auto;
-}
-
-/* =========================================================
-   5. SEÇÕES GERAIS
-========================================================= */
-
-section {
-  padding: 60px 20px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-section h2 {
-  color: #0a3d62;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-ul li {
-  margin-bottom: 10px;
-}
-
-/* =========================================================
-   6. CARDS DE SERVIÇOS
-========================================================= */
-
+/* ==============================
+   CARDS DE ATUAÇÃO
+================================ */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  padding: 40px 20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
 }
 
 .card {
-  background: white;
-  padding: 0;
-  border-radius: 10px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  text-align: center;
-  font-weight: 600;
-  transition: transform 0.3s, box-shadow 0.3s;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-.card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  flex-shrink: 0;
+  background-color: var(--azul-card);
+  padding: 40px 32px;
+  border-left: 4px solid transparent;
+  transition: all 0.35s ease;
+  position: relative;
 }
 
 .card h3 {
-  margin: 15px 0 10px 0;
-  padding: 0 15px;
-  color: #004aad;
+  font-size: 1.15rem;
+  font-weight: 600;
 }
 
-.card p {
-  padding: 0 15px 15px 15px;
-  margin: 0;
-  flex-grow: 1;
+.card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--amarelo);
+  transition: width 0.35s ease;
 }
 
-/* =========================================================
-   7. PROJETOS EM DESTAQUE
-========================================================= */
+.card:hover {
+  transform: translateY(-8px);
+  background-color: var(--azul-card-hover);
+  border-left: 4px solid var(--amarelo);
+}
 
-.projetos-destaque {
+.card:hover::after {
   width: 100%;
-  padding: 100px 0;
-  background-color: #f4f6f8;
 }
 
-/* Linhas */
-.projetos-destaque .linha {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  max-width: 1600px;
-  margin: 0 auto 120px auto;
-  padding: 0 5%;
-  gap: 80px;
-}
-
-/* Linha invertida */
-.projetos-destaque .linha.reverso {
-  flex-direction: row-reverse;
-}
-
-/* Imagem */
-.projetos-destaque .imagem {
-  width: 50%;
-  flex-shrink: 0;
-}
-
-.projetos-destaque .imagem img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 16px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-}
-
-/* Texto */
-.projetos-destaque .texto {
-  width: 50%;
-}
-
-.projetos-destaque h2 {
-  font-size: 2.4rem;
-  margin-bottom: 24px;
-  color: #0a2540;
-}
-
-.projetos-destaque p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #222;
-}
-
-/* =========================================================
-   8. SOBRE
-========================================================= */
-
-.sobre {
+/* ==============================
+   TRANSIÇÃO ENERGÉTICA
+================================ */
+.transicao p {
   max-width: 900px;
-  margin: 80px auto;
-  padding: 0 20px;
+  color: var(--cinza);
 }
 
-.sobre p {
-  margin-bottom: 24px;
-  line-height: 1.8;
-  font-size: 1.05rem;
-  color: #222;
-}
-
-/* =========================================================
-   9. FOOTER
-========================================================= */
-
-footer {
-  background: #0a3d62;
-  color: white;
+/* ==============================
+   CTA FINAL
+================================ */
+.cta {
+  background-color: #0f1530;
   text-align: center;
-  padding: 20px;
-  font-size: 0.9rem;
-  line-height: 1.5;
 }
 
-/* =========================================================
-   10. RESPONSIVIDADE
-========================================================= */
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 32px;
+}
 
-/* Menu Mobile */
+/* ==============================
+   ANIMAÇÕES
+================================ */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==============================
+   RESPONSIVO
+================================ */
 @media (max-width: 768px) {
-  header nav {
-    position: relative;
-    padding: 12px 10px;
-    flex-wrap: wrap;
+  .hero h1 {
+    font-size: 2.2rem;
   }
 
-  header nav a {
-    margin: 8px 12px;
-    font-size: 0.95rem;
+  .hero h2 {
+    font-size: 1.1rem;
   }
 
-  body {
-    padding-top: 0;
-  }
-}
-
-/* Ajustes gerais mobile */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 2rem;
-  }
-
-  header p {
-    font-size: 1rem;
-  }
-
-  header nav {
-    flex-direction: column;
-  }
-
-  header nav a {
-    margin: 10px 0;
-  }
-
-  .cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Projetos destaque mobile */
-@media (max-width: 900px) {
-  .projetos-destaque .linha,
-  .projetos-destaque .linha.reverso {
-    flex-direction: column;
-  }
-
-  .projetos-destaque .imagem,
-  .projetos-destaque .texto {
-    width: 100%;
-    text-align: center;
+  section {
+    padding: 60px 8%;
   }
 }
