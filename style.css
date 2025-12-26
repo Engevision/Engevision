@@ -954,13 +954,17 @@ section {
   --sombra-pesada: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
-/* Espaçamento estrutural */
+/* ==============================
+   Espaçamento estrutural
+============================== */
 .top-space {
   height: 100px;
   background: linear-gradient(to bottom, var(--azul-engenharia), transparent);
 }
 
-/* Hero Section - Autoridade técnica */
+/* ==============================
+   Hero Section - Autoridade técnica
+============================== */
 .hero-projeto {
   padding: 80px 0 40px;
   background: linear-gradient(135deg, var(--azul-engenharia) 0%, #0d2b4d 100%);
@@ -1028,7 +1032,9 @@ section {
   font-weight: 400;
 }
 
-/* Cards de Especialidades - Layout técnico */
+/* ==============================
+   Cards de Especialidades - Layout técnico
+============================== */
 .oferecemos {
   background-color: #f8fafc;
   padding: 100px 0;
@@ -1124,7 +1130,9 @@ section {
   margin-bottom: 25px;
 }
 
-/* Diferenciais - Lista técnica */
+/* ==============================
+   Diferenciais - Lista técnica
+============================== */
 .diferenciais {
   padding: 100px 0;
   background-color: var(--azul-engenharia);
@@ -1191,7 +1199,9 @@ section {
   box-shadow: 0 4px 8px rgba(255, 193, 7, 0.3);
 }
 
-/* CTA - Chamada profissional */
+/* ==============================
+   CTA - Chamada profissional
+============================== */
 .cta-orcamento {
   text-align: center;
   margin: 80px auto;
@@ -1261,7 +1271,9 @@ section {
   box-shadow: 0 12px 24px rgba(255, 193, 7, 0.4);
 }
 
-/* Responsividade profissional */
+/* ==============================
+   Responsividade profissional
+============================== */
 @media (max-width: 1024px) {
   .hero-projeto .section-title {
     font-size: 2.8rem;
