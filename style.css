@@ -940,96 +940,433 @@ section {
   }
 }
 
-/* ==============================
-   SEÇÃO DE PROJETOS - AJUSTE
-================================ */
+/* =============================================
+   PROJETOS E EXECUÇÃO ELÉTRICA - PADRÃO ENGENHARIA
+   CSS otimizado para autoridade técnica e consistência
+============================================== */
 
-/* Hero Projeto */
+:root {
+  --azul-engenharia: #0a1f3a;
+  --azul-secundario: #0d2b4d;
+  --amarelo-destaque: #ffc107;
+  --cinza-texto: #c5d1de;
+  --cinza-claro: #f4f6f8;
+  --branco: #ffffff;
+  --sombra-leve: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* ====================
+   ESTRUTURA BASE
+==================== */
+.top-space {
+  height: 100px;
+  background: linear-gradient(to bottom, var(--azul-engenharia), transparent);
+}
+
+/* ====================
+   HERO - PADRÃO ENGENHARIA
+==================== */
 .hero-projeto {
-  padding: 80px 0 40px;
-  background: var(--azul-base); /* alinhado com o site */
-  border-bottom: 4px solid var(--amarelo);
+  background: linear-gradient(135deg, var(--azul-engenharia), var(--azul-secundario));
+  padding: 120px 0 80px;
+  border-bottom: 4px solid var(--amarelo-destaque);
   margin-top: 80px;
   position: relative;
   overflow: hidden;
 }
 
 .hero-projeto::before {
-  background: radial-gradient(circle, rgba(242,183,5,0.08) 0%, transparent 70%);
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 40%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,193,7,0.05) 0%, transparent 70%);
+  transform: rotate(15deg);
+}
+
+.hero-projeto .hero-content {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-projeto .hero-text {
+  max-width: 640px;
 }
 
 .hero-projeto .section-title {
-  font-size: 2.8rem;
-  color: var(--amarelo);
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--branco);
+  margin-bottom: 24px;
+  position: relative;
+  display: inline-block;
 }
 
 .hero-projeto .section-title::after {
-  width: 80px;
-  background-color: var(--amarelo);
+  content: "";
+  width: 120px;
+  height: 4px;
+  background-color: var(--amarelo-destaque);
+  display: block;
+  margin-top: 20px;
+  border-radius: 2px;
 }
 
 .hero-projeto .section-subtitle {
   font-size: 1.2rem;
-  color: var(--cinza);
-  max-width: 700px;
-  margin: 0 auto 40px;
+  line-height: 1.8;
+  color: var(--cinza-texto);
+  margin-bottom: 40px;
+  max-width: 90%;
 }
 
-/* Cards de Especialidades */
+/* ====================
+   SELLOS DE CONFIANÇA
+==================== */
+.trust-section {
+  background: var(--azul-secundario);
+  padding: 40px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.trust-badges {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+  color: var(--branco);
+  padding: 12px 16px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.badge:hover {
+  background: rgba(255,255,255,0.1);
+  transform: translateY(-2px);
+}
+
+.badge i {
+  color: var(--amarelo-destaque);
+  font-size: 1.2rem;
+}
+
+/* ====================
+   SEÇÃO DE ESPECIALIDADES
+==================== */
 .oferecemos {
-  background-color: var(--azul-card); /* fundo escuro consistente */
-  padding: 80px 0;
+  padding: 100px 0;
+  background: var(--cinza-claro);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.oferecemos .section-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--azul-engenharia);
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  color: #5f6f82;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.oferecemos .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .oferecemos .card {
-  background-color: var(--azul-card-hover);
-  color: var(--branco);
-  border: 1px solid rgba(31, 79, 216, 0.15);
-  padding: 35px 25px;
+  background: var(--branco);
+  padding: 40px 30px;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  box-shadow: var(--sombra-leve);
+}
+
+.oferecemos .card:hover {
+  transform: translateY(-8px);
+  border-color: var(--amarelo-destaque);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.card-icon {
+  font-size: 3rem;
+  color: var(--azul-engenharia);
+  margin-bottom: 25px;
+  transition: transform 0.3s ease;
+}
+
+.oferecemos .card:hover .card-icon {
+  transform: scale(1.1);
+  color: var(--amarelo-destaque);
 }
 
 .oferecemos .card h3 {
-  color: var(--amarelo);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--azul-engenharia);
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.oferecemos .card h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background: var(--amarelo-destaque);
 }
 
 .oferecemos .card p {
-  color: var(--cinza);
+  color: #4a5568;
+  line-height: 1.7;
+  margin-bottom: 25px;
 }
 
-/* Diferenciais */
+/* ====================
+   DIFERENCIAIS TÉCNICOS
+==================== */
 .diferenciais {
-  background-color: var(--azul-escuro);
-  padding: 80px 0;
+  padding: 100px 0;
+  background: var(--branco);
 }
 
 .diferenciais .section-title {
-  color: var(--amarelo);
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--azul-engenharia);
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.diferenciais ul {
+  list-style: none;
+  padding-left: 0;
+  max-width: 800px;
+  margin: 0 auto;
+  counter-reset: diferenciais-counter;
 }
 
 .diferenciais ul li {
-  color: var(--cinza);
+  margin-bottom: 22px;
+  font-size: 1.1rem;
+  color: var(--azul-engenharia);
+  padding-left: 50px;
+  position: relative;
+  line-height: 1.7;
+  padding-top: 8px;
+  font-weight: 500;
 }
 
 .diferenciais ul li::before {
-  background: var(--amarelo);
-  color: var(--azul-base);
+  counter-increment: diferenciais-counter;
+  content: counter(diferenciais-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 36px;
+  height: 36px;
+  background: var(--amarelo-destaque);
+  color: var(--azul-engenharia);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
 }
 
-/* CTA Orçamento */
+/* ====================
+   CTA PROFISSIONAL
+==================== */
 .cta-orcamento {
-  background-color: var(--azul-card);
-  border: 2px solid var(--amarelo);
+  text-align: center;
+  margin: 80px auto;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, var(--azul-engenharia), var(--azul-secundario));
+  border-radius: 16px;
+  max-width: 900px;
+  border: 3px solid var(--amarelo-destaque);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-orcamento::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,193,7,0.1) 0%, transparent 50%);
+  z-index: 1;
+}
+
+.cta-orcamento .cta-content {
+  position: relative;
+  z-index: 2;
 }
 
 .cta-orcamento h3 {
-  color: var(--amarelo);
+  font-size: 2.2rem;
+  color: var(--branco);
+  margin-bottom: 20px;
+  font-weight: 700;
 }
 
 .cta-orcamento p {
-  color: var(--cinza);
+  font-size: 1.2rem;
+  color: var(--cinza-texto);
+  margin-bottom: 35px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cta-orcamento .btn-large {
-  background-color: var(--amarelo);
-  color: var(--azul-base);
+  padding: 18px 45px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: var(--amarelo-destaque);
+  color: var(--azul-engenharia);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 6px 12px rgba(255, 193, 7, 0.3);
+}
+
+.cta-orcamento .btn-large:hover {
+  background: #ffd54f;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(255, 193, 7, 0.4);
+}
+
+/* ====================
+   RESPONSIVIDADE
+==================== */
+@media (max-width: 1024px) {
+  .hero-projeto .hero-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .hero-projeto .section-title {
+    font-size: 2.4rem;
+  }
+  
+  .trust-badges {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-projeto {
+    padding: 90px 0 60px;
+  }
+  
+  .top-space {
+    height: 80px;
+  }
+  
+  .hero-projeto .section-title {
+    font-size: 2rem;
+  }
+  
+  .hero-projeto .section-subtitle {
+    font-size: 1.1rem;
+    max-width: 100%;
+  }
+  
+  .trust-badges {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .oferecemos,
+  .diferenciais {
+    padding: 70px 0;
+  }
+  
+  .oferecemos .cards {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .diferenciais ul li {
+    font-size: 1rem;
+    padding-left: 45px;
+  }
+  
+  .cta-orcamento {
+    margin: 60px 20px;
+    padding: 50px 30px;
+  }
+  
+  .cta-orcamento h3 {
+    font-size: 1.9rem;
+  }
+  
+  .cta-orcamento .btn-large {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-projeto .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .oferecemos .card {
+    padding: 30px 20px;
+  }
+  
+  .cta-orcamento {
+    padding: 40px 20px;
+  }
+  
+  .cta-orcamento h3 {
+    font-size: 1.7rem;
+  }
 }
