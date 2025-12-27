@@ -1493,11 +1493,11 @@ section {
 }
 
 /* ==============================
-   TIPOS DE PROJETOS - BLOCO AZUL
+   TIPOS DE PROJETOS - BLOCO AMARELO
 ================================ */
 .tipos-projetos {
   padding: 0;
-  background-color: var(--azul-base); /* fundo azul */
+  background-color: var(--amarelo); /* fundo amarelo */
 }
 
 .tipos-grid {
@@ -1506,13 +1506,13 @@ section {
 }
 
 .tipo-item {
-  flex: 1 1 25%; /* 4 itens lado a lado */
+  flex: 1 1 20%; /* itens 20% menores do que antes */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 60px 20px;
-  color: var(--amarelo); /* ícones e texto amarelos */
+  padding: 48px 16px; /* 20% menor que antes */
+  color: var(--azul-base); /* ícones e texto azuis */
   font-weight: 600;
   position: relative;
   overflow: hidden;
@@ -1527,7 +1527,7 @@ section {
   left: 0;
   height: 4px;
   width: 0%;
-  background-color: var(--amarelo); /* traço amarelo */
+  background-color: var(--azul-base); /* traço azul */
   transition: width 0.4s ease;
 }
 
@@ -1537,33 +1537,33 @@ section {
 
 .tipo-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .tipo-item i {
-  font-size: 3rem;
-  margin-bottom: 15px;
-  color: var(--amarelo); /* ícones amarelos */
+  font-size: 2.4rem; /* reduzido 20% */
+  margin-bottom: 12px;
+  color: var(--azul-base); /* ícones azuis */
 }
 
 .tipo-item h4 {
-  font-size: 1.25rem;
+  font-size: 1rem; /* reduzido 20% */
   margin: 0;
   text-align: center;
-  color: var(--amarelo); /* texto amarelo */
+  color: var(--azul-base); /* texto azul */
 }
 
 /* RESPONSIVO */
 @media (max-width: 1024px) {
   .tipo-item {
     flex: 1 1 50%; /* 2 itens por linha no tablet */
-    padding: 50px 20px;
+    padding: 40px 16px;
   }
 }
 
 @media (max-width: 600px) {
   .tipo-item {
     flex: 1 1 100%; /* 1 item por linha no mobile */
-    padding: 40px 20px;
+    padding: 32px 16px;
   }
 }
