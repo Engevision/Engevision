@@ -1491,3 +1491,57 @@ section {
     max-width: 100%; /* ocupa toda a largura do bloco */
   }
 }
+
+/* ==============================
+   TIPOS DE PROJETOS
+================================ */
+.tipos-projetos {
+  padding: 60px 0;
+  background-color: var(--azul-card);
+  color: var(--branco);
+}
+
+.tipos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  text-align: center;
+}
+
+.tipo-item {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tipo-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.tipo-item i {
+  font-size: 2.5rem;
+  color: var(--amarelo);
+  margin-bottom: 15px;
+}
+
+.tipo-item h4 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+/* RESPONSIVO */
+@media (max-width: 1024px) {
+  .tipos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .tipos-grid {
+    grid-template-columns: 1fr;
+  }
+}
