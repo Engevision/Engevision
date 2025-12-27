@@ -1356,4 +1356,29 @@ section {
   }
 }
 
+/* ==============================
+   HERO - PROJETOS ELÉTRICOS
+================================ */
+.servico-hero {
+  min-height: 70vh;
+  background: linear-gradient(rgba(11, 16, 32, 0.9), rgba(11, 16, 32, 0.85)),
+              url("images/projetos-eletricos.jpg") center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 140px 20px 80px;
+  margin-top: 70px;
+}
+
+.servico-hero-content {
+  max-width: 800px;
+  animation: fadeUp 1s ease forwards;
+}
+
+/* ==============================
+   SOBRE SERVIÇO
+================================ */
+.servico-sobre {
+  padding: 100px 0;
+}
+
 
