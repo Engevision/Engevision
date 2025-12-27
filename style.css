@@ -1421,7 +1421,17 @@ section {
 .engenharia-item {
   display: flex;
   align-items: center;
-  gap: 40px; /* aumentei o espaço para melhor leitura */
+  gap: 40px; /* espaço maior para leitura */
+  background-color: rgba(255, 255, 255, 0.05); /* fundo do bloco */
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.engenharia-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
 
 .engenharia-item.reverse {
@@ -1430,17 +1440,15 @@ section {
 
 .engenharia-item-texto {
   flex: 1;
-  font-size: 1.1rem; /* leve aumento para preencher o espaço */
+  font-size: 1.1rem; /* leve aumento */
   line-height: 1.7;
 }
 
 .engenharia-item-visual {
-  flex: 0 0 375px; /* aumentei 50% em relação ao tamanho anterior de 250px */
+  flex: 0 0 375px; /* imagem maior */
   position: relative;
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .engenharia-item-visual::before {
@@ -1456,11 +1464,6 @@ section {
 
 .engenharia-item-visual:hover::before {
   width: 100%;
-}
-
-.engenharia-item-visual:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 .engenharia-item-visual img {
