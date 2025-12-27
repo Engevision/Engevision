@@ -1853,3 +1853,418 @@ body {
   }
 }
 
+/* ==============================
+   PÁGINA SOBRE - ESTILOS ESPECÍFICOS
+================================ */
+
+/* HERO SOBRE */
+.sobre-hero {
+  min-height: 70vh;
+  background: linear-gradient(rgba(11, 16, 32, 0.9), rgba(11, 16, 32, 0.85)),
+              url("images/sobre-hero.jpg") center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 140px 20px 80px;
+  margin-top: 70px;
+  position: relative;
+}
+
+.sobre-hero-content {
+  max-width: 800px;
+  animation: fadeUp 1s ease forwards;
+}
+
+.sobre-hero .slogan {
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--amarelo);
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* SOBRE EMPRESA */
+.sobre-empresa {
+  padding: 100px 0;
+}
+
+.sobre-conteudo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.sobre-texto h2 {
+  margin-bottom: 30px;
+}
+
+.sobre-texto p {
+  margin-bottom: 20px;
+  color: var(--cinza);
+  line-height: 1.8;
+}
+
+.sobre-destaque {
+  display: grid;
+  gap: 25px;
+}
+
+.destaque-box {
+  background: var(--azul-card);
+  padding: 30px;
+  border-radius: 8px;
+  border-left: 4px solid var(--amarelo);
+  transition: transform 0.3s ease;
+}
+
+.destaque-box:hover {
+  transform: translateY(-5px);
+}
+
+.destaque-box i {
+  font-size: 2.2rem;
+  color: var(--amarelo);
+  margin-bottom: 20px;
+}
+
+.destaque-box h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: var(--branco);
+}
+
+.destaque-box p {
+  color: var(--cinza);
+  line-height: 1.6;
+}
+
+/* SERVIÇOS DETALHADOS */
+.servicos-detalhados {
+  padding: 100px 0;
+  background-color: var(--azul-escuro);
+}
+
+.servicos-lista {
+  max-width: 1000px;
+  margin: 50px auto 0;
+}
+
+.servico-item {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 30px;
+  margin-bottom: 50px;
+  align-items: start;
+}
+
+.servico-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--azul-card);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--amarelo);
+}
+
+.servico-icon i {
+  font-size: 2.5rem;
+  color: var(--amarelo);
+}
+
+.servico-content h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: var(--branco);
+}
+
+.servico-content p {
+  color: var(--cinza);
+  line-height: 1.8;
+}
+
+/* DIFERENCIAIS SOBRE */
+.diferenciais-sobre {
+  padding: 100px 0;
+}
+
+.diferenciais-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.diferencial-card {
+  background: var(--azul-card);
+  padding: 40px 30px;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.diferencial-card:hover {
+  transform: translateY(-10px);
+  background: var(--azul-card-hover);
+  border-color: var(--amarelo);
+}
+
+.diferencial-icon {
+  font-size: 2.8rem;
+  color: var(--amarelo);
+  margin-bottom: 25px;
+}
+
+.diferencial-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--branco);
+}
+
+.diferencial-card p {
+  color: var(--cinza);
+  line-height: 1.7;
+}
+
+/* EQUIPE SOBRE */
+.equipe-sobre {
+  padding: 100px 0;
+  background-color: var(--azul-escuro);
+}
+
+.equipe-conteudo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.equipe-texto h2 {
+  margin-bottom: 30px;
+}
+
+.equipe-texto p {
+  margin-bottom: 20px;
+  color: var(--cinza);
+  line-height: 1.8;
+}
+
+.equipe-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.stat-item {
+  background: var(--azul-card);
+  padding: 25px 15px;
+  border-radius: 8px;
+  text-align: center;
+  border-top: 4px solid var(--amarelo);
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--amarelo);
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--cinza);
+  font-weight: 600;
+}
+
+/* MISSÃO */
+.missao-sobre {
+  padding: 100px 0;
+}
+
+.missao-conteudo {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 50px;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.missao-icon {
+  width: 150px;
+  height: 150px;
+  background: var(--azul-card);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--amarelo);
+}
+
+.missao-icon i {
+  font-size: 4rem;
+  color: var(--amarelo);
+}
+
+.missao-texto h2 {
+  margin-bottom: 25px;
+}
+
+.missao-destaque {
+  font-size: 1.5rem;
+  color: var(--branco);
+  line-height: 1.6;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.missao-texto p {
+  color: var(--cinza);
+  line-height: 1.8;
+}
+
+/* CTA FINAL */
+.cta-final {
+  padding: 80px 0;
+  background: linear-gradient(rgba(11, 16, 32, 0.9), rgba(11, 16, 32, 0.9)),
+              url("images/cta-bg.jpg") center/cover no-repeat;
+  text-align: center;
+}
+
+.cta-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--branco);
+}
+
+.cta-subtitle {
+  font-size: 1.2rem;
+  color: var(--cinza);
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center-btn {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid var(--amarelo);
+  color: var(--amarelo);
+}
+
+.btn-secondary:hover {
+  background-color: var(--amarelo);
+  color: var(--azul-base);
+}
+
+/* NAVEGAÇÃO ATIVA */
+.nav-menu > li > a.active {
+  color: var(--amarelo);
+}
+
+.nav-menu > li > a.active::after {
+  width: 100%;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1024px) {
+  .sobre-conteudo,
+  .equipe-conteudo {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .missao-conteudo {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 30px;
+  }
+  
+  .missao-icon {
+    margin: 0 auto;
+  }
+  
+  .cta-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sobre-hero {
+    padding: 120px 20px 60px;
+    min-height: 60vh;
+  }
+  
+  .sobre-hero .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .servico-item {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  .servico-icon {
+    margin: 0 auto;
+  }
+  
+  .equipe-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .diferenciais-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .center-btn {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .center-btn .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sobre-hero .hero-title {
+    font-size: 2rem;
+  }
+  
+  .sobre-hero .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .equipe-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .stat-item {
+    padding: 20px 10px;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .destaque-box {
+    padding: 20px;
+  }
+  
+  .diferencial-card {
+    padding: 30px 20px;
+  }
+}
