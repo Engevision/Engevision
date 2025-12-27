@@ -1421,7 +1421,7 @@ section {
 .engenharia-item {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 40px; /* aumentei o espaço para melhor leitura */
 }
 
 .engenharia-item.reverse {
@@ -1430,12 +1430,12 @@ section {
 
 .engenharia-item-texto {
   flex: 1;
-  font-size: 1.05rem;
-  line-height: 1.6;
+  font-size: 1.1rem; /* leve aumento para preencher o espaço */
+  line-height: 1.7;
 }
 
 .engenharia-item-visual {
-  flex: 0 0 250px; /* largura discreta da imagem */
+  flex: 0 0 375px; /* aumentei 50% em relação ao tamanho anterior de 250px */
   position: relative;
   border-radius: 10px;
   overflow: hidden;
@@ -1476,7 +1476,7 @@ section {
   }
 
   .engenharia-item-visual {
-    width: 200px;
+    width: 250px; /* mantém proporcional no mobile */
     margin: 0 auto;
   }
 }
