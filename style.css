@@ -304,7 +304,7 @@ img {
 .hero {
   min-height: 100vh;
   background: linear-gradient(rgba(11, 16, 32, 0.85), rgba(11, 16, 32, 0.9)),
-              url("images/capa.jpg") center / cover no-repeat;
+              url("images/capa.png") center / cover no-repeat;
   display: flex;
   align-items: center;
   padding: 140px 20px 80px;
@@ -1705,3 +1705,4 @@ section {
   font-size: 1.8rem;
   color: var(--amarelo);
 }
+
