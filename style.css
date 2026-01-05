@@ -1188,7 +1188,7 @@ section {
 }
 
 /* ==============================
-   ENGENHARIA - O QUE ENTREGAMOS
+   ENGENHARIA - O QUE ENTREGAMOS (itens com ícones no padrão solicitado)
 ================================ */
 .engenharia-entrega {
   padding: 100px 0;
@@ -1207,95 +1207,75 @@ section {
 
 .engenharia-entrega .section-title {
   font-size: 2.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
+  color: var(--branco);
 }
 
 .engenharia-descricao {
   font-size: 1.1rem;
   line-height: 1.8;
   margin-bottom: 60px;
+  color: var(--cinza-claro);
 }
 
-/* GRID DE ITENS 2x2 */
-.engenharia-itens {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-}
-
-/* BLOCO DO ITEM */
-.engenharia-item {
+/* Lista dos itens com ícones e texto ao lado */
+.engenharia-itens-icones {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 30px;
+}
+
+.engenharia-icone-item {
+  display: flex;
+  align-items: flex-start;
   gap: 20px;
-  background-color: rgba(255, 255, 255, 0.05);
-  padding: 30px;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.engenharia-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-}
-
-/* TEXTO DO ITEM */
-.engenharia-item-texto {
-  text-align: center;
-  font-size: 1.1rem;
-  line-height: 1.7;
-}
-
-.engenharia-item-texto strong {
-  display: block;
-  font-weight: 700;
-  font-size: 1.2rem;
-  margin-bottom: 8px;
+.engenharia-icone-item i {
+  min-width: 50px;
+  height: 50px;
+  border: 2px solid var(--amarelo);
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 1.6rem;
   color: var(--amarelo);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
-/* IMAGEM DO ITEM */
-.engenharia-item-visual {
-  width: 100%;
-  max-width: 350px;
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
+.engenharia-icone-item p {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--cinza-claro);
 }
 
-.engenharia-item-visual::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 4px;
-  width: 0%;
-  background-color: var(--amarelo);
-  transition: width 0.4s ease;
-}
-
-.engenharia-item-visual:hover::before {
-  width: 100%;
-}
-
-.engenharia-item-visual img {
-  width: 100%;
-  border-radius: 6px;
+/* Para o texto forte (título do item), mantemos inline no parágrafo */
+.engenharia-icone-item p strong {
+  font-weight: 700;
+  color: var(--branco);
 }
 
 /* RESPONSIVO */
-@media (max-width: 1024px) {
-  .engenharia-itens {
-    grid-template-columns: 1fr;
-    gap: 30px;
+@media (max-width: 768px) {
+  .engenharia-icone-item {
+    gap: 15px;
   }
 
-  .engenharia-item-visual {
-    max-width: 100%;
+  .engenharia-icone-item i {
+    min-width: 40px;
+    height: 40px;
+    padding: 8px;
+    font-size: 1.3rem;
+  }
+
+  .engenharia-icone-item p {
+    font-size: 1rem;
   }
 }
+
 /* ==========================
    CARDS 2x2 COM IMAGEM ACIMA
 ========================== */
@@ -2333,6 +2313,7 @@ section {
     max-width: 300px;
   }
 }
+
 
 
 
