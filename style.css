@@ -1188,93 +1188,81 @@ section {
 }
 
 /* ==============================
-   ENGENHARIA - O QUE ENTREGAMOS (itens com ícones no padrão solicitado)
+   ENGENHARIA - ITENS COM ÍCONES (Layout conforme anexo)
 ================================ */
-.engenharia-entrega {
-  padding: 100px 0;
-  background-color: var(--azul-base);
-  color: var(--branco);
-}
-
-.engenharia-entrega .slogan {
-  font-size: 0.85rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--amarelo);
-  margin-bottom: 15px;
-  font-weight: 600;
-}
-
-.engenharia-entrega .section-title {
-  font-size: 2.5rem;
-  margin-bottom: 60px;
-  color: var(--branco);
-}
-
-.engenharia-descricao {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin-bottom: 60px;
-  color: var(--cinza-claro);
-}
-
-/* Lista dos itens com ícones e texto ao lado */
 .engenharia-itens-icones {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 40px; /* espaçamento maior entre itens */
+  background-color: #0B0C17; /* fundo escuro próximo ao anexo */
+  padding: 60px 40px;
+  border-radius: 12px;
 }
 
 .engenharia-icone-item {
   display: flex;
   align-items: flex-start;
-  gap: 20px;
+  gap: 25px;
 }
 
 .engenharia-icone-item i {
-  min-width: 50px;
-  height: 50px;
-  border: 2px solid var(--amarelo);
+  min-width: 56px;
+  height: 56px;
+  border: 2.5px solid #EAB308; /* amarelo vivo */
   border-radius: 50%;
-  padding: 10px;
-  font-size: 1.6rem;
-  color: var(--amarelo);
+  padding: 8px;
+  font-size: 1.8rem;
+  color: #EAB308;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  margin-top: 4px; /* alinha verticalmente o ícone com o título */
 }
 
 .engenharia-icone-item p {
   margin: 0;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: var(--cinza-claro);
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: #C0C0CC; /* cinza claro */
 }
 
-/* Para o texto forte (título do item), mantemos inline no parágrafo */
 .engenharia-icone-item p strong {
+  display: block;
   font-weight: 700;
-  color: var(--branco);
+  font-size: 1.25rem;
+  color: #FFFFFF;
+  margin-bottom: 6px;
 }
 
 /* RESPONSIVO */
 @media (max-width: 768px) {
+  .engenharia-itens-icones {
+    padding: 40px 20px;
+    gap: 30px;
+  }
+
   .engenharia-icone-item {
     gap: 15px;
   }
 
   .engenharia-icone-item i {
-    min-width: 40px;
-    height: 40px;
-    padding: 8px;
-    font-size: 1.3rem;
+    min-width: 48px;
+    height: 48px;
+    padding: 6px;
+    font-size: 1.5rem;
+    margin-top: 3px;
   }
 
   .engenharia-icone-item p {
     font-size: 1rem;
   }
+
+  .engenharia-icone-item p strong {
+    font-size: 1.1rem;
+  }
 }
+
 
 /* ==========================
    CARDS 2x2 COM IMAGEM ACIMA
@@ -2313,6 +2301,7 @@ section {
     max-width: 300px;
   }
 }
+
 
 
 
