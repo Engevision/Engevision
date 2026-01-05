@@ -1216,57 +1216,86 @@ section {
   margin-bottom: 60px;
 }
 
-/* ==========================
-   ITENS SIMPLES COM ÍCONES
-========================== */
-.engenharia-itens-lista {
+/* GRID DE ITENS 2x2 */
+.engenharia-itens {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+/* BLOCO DO ITEM */
+.engenharia-item {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* espaço entre os itens */
-  margin-bottom: 60px;
+  align-items: center;
+  gap: 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.engenharia-item-lista {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px; /* distância entre ícone e texto */
-  margin-bottom: 15px;
+.engenharia-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
 
-.engenharia-item-lista .item-icon i {
-  font-size: 2rem;
-  color: var(--amarelo);
-  flex-shrink: 0; /* ícone não encolhe */
+/* TEXTO DO ITEM */
+.engenharia-item-texto {
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.7;
 }
 
-.engenharia-item-lista .item-texto strong {
+.engenharia-item-texto strong {
   display: block;
-  font-weight: 600;
-  font-size: 1.05rem;
-  margin-bottom: 5px;
-  color: inherit; /* mantém cor do texto padrão, não amarelo */
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: var(--amarelo);
 }
 
-.engenharia-item-lista .item-texto p {
-  margin: 0;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: inherit;
+/* IMAGEM DO ITEM */
+.engenharia-item-visual {
+  width: 100%;
+  max-width: 350px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.engenharia-item-visual::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background-color: var(--amarelo);
+  transition: width 0.4s ease;
+}
+
+.engenharia-item-visual:hover::before {
+  width: 100%;
+}
+
+.engenharia-item-visual img {
+  width: 100%;
+  border-radius: 6px;
 }
 
 /* RESPONSIVO */
-@media (max-width: 768px) {
-  .engenharia-item-lista {
-    flex-direction: row; /* mantém a mesma estrutura */
-    gap: 15px;
+@media (max-width: 1024px) {
+  .engenharia-itens {
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
 
-  .engenharia-item-lista .item-icon i {
-    font-size: 1.8rem;
+  .engenharia-item-visual {
+    max-width: 100%;
   }
 }
-
-
 /* ==========================
    CARDS 2x2 COM IMAGEM ACIMA
 ========================== */
@@ -2304,6 +2333,7 @@ section {
     max-width: 300px;
   }
 }
+
 
 
 
