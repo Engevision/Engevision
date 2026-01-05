@@ -1217,27 +1217,47 @@ section {
 }
 
 /* ==========================
-   ITENS SIMPLES - LISTA
+   ITENS SIMPLES COM ÍCONES
 ========================== */
 .engenharia-itens-lista {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+  gap: 30px;
   margin-bottom: 60px;
 }
 
-.engenharia-item-lista strong {
+.engenharia-item-lista {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.engenharia-item-lista .engenharia-icon {
+  font-size: 2rem;
+  color: var(--amarelo);
+  flex-shrink: 0;
+}
+
+.engenharia-item-lista .engenharia-texto {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.engenharia-item-lista .engenharia-texto strong {
   display: block;
   font-weight: 700;
   color: var(--amarelo);
   margin-bottom: 5px;
 }
 
-.engenharia-item-lista p {
-  margin: 0;
-  line-height: 1.6;
-  font-size: 1.05rem;
+/* RESPONSIVO */
+@media (max-width: 1024px) {
+  .engenharia-itens-lista {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }
+
 
 /* ==========================
    CARDS 2x2 COM IMAGEM ACIMA
@@ -2276,6 +2296,7 @@ section {
     max-width: 300px;
   }
 }
+
 
 
 
