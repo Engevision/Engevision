@@ -1285,6 +1285,18 @@ section {
   border-radius: 6px;
 }
 
+/* RESPONSIVO */
+@media (max-width: 1024px) {
+  .engenharia-itens {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .engenharia-item-visual {
+    max-width: 100%;
+  }
+}
+
 /* ==============================
    CTA ESPECÍFICO PARA SERVIÇOS
 ================================ */
@@ -2265,4 +2277,5 @@ section {
     max-width: 300px;
   }
 }
+
 
