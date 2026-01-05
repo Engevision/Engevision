@@ -1216,42 +1216,41 @@ section {
   margin-bottom: 60px;
 }
 
-/* ==========================
+//* ==========================
    ITENS SIMPLES COM ÍCONES
 ========================== */
-.engenharia-itens-icones {
+.engenharia-itens-lista {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* espaço entre os itens */
+  gap: 20px; /* espaço entre itens */
   margin-bottom: 60px;
 }
 
-.engenharia-icone-item {
+.engenharia-item-lista {
   display: flex;
   align-items: flex-start;
   gap: 15px; /* espaço entre ícone e texto */
 }
 
-.engenharia-icone-item i {
+.engenharia-item-lista .item-icon i {
   font-size: 2rem;
   color: var(--amarelo);
-  flex-shrink: 0; /* não deixa o ícone encolher */
+  flex-shrink: 0; /* ícone não encolhe */
+  margin-top: 5px; /* alinha melhor com o texto */
 }
 
-.engenharia-icone-item p {
+.engenharia-item-lista .item-texto p {
   margin: 0;
   font-size: 1.05rem;
   line-height: 1.6;
 }
 
-.engenharia-icone-item p strong {
+.engenharia-item-lista .item-texto strong {
   display: block;
   font-weight: 700;
   color: var(--amarelo);
   margin-bottom: 5px;
 }
-
-
 
 /* ==========================
    CARDS 2x2 COM IMAGEM ACIMA
@@ -2290,6 +2289,7 @@ section {
     max-width: 300px;
   }
 }
+
 
 
 
